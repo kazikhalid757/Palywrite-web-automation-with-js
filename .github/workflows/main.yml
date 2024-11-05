@@ -14,10 +14,10 @@ jobs:
 
     steps:
     - name: Checkout code
-      uses: actions/checkout@v2
+      uses: actions/checkout@v3
 
     - name: Set up Node.js
-      uses: actions/setup-node@v2
+      uses: actions/setup-node@v3
       with:
         node-version: '14' # Specify the Node.js version
 
@@ -36,7 +36,7 @@ jobs:
         mv reports/html reports/html/$(date +'%Y-%m-%d_%H-%M-%S')
 
     - name: Upload Test Report
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v3
       with:
         name: playwright-report
         path: reports/html/*

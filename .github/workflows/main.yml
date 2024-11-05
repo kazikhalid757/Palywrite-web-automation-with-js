@@ -1,0 +1,42 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main # Change this to your default branch
+  pull_request:
+    branches:
+      - main # Change this to your default branch
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: '14' # Specify the Node.js version
+
+    - name: Install dependencies
+      run: npm install
+
+    - name: Run Playwright tests
+      run: npm test
+      env:
+        HEADLESS: true # Run in headless mode
+
+    - name: Generate Reports
+      run: |
+        npx playwright show-report reports/html
+        mkdir -p reports
+        mv reports/html reports/html/$(date +'%Y-%m-%d_%H-%M-%S')
+
+    - name: Upload Test Report
+      uses: actions/upload-artifact@v2
+      with:
+        name: playwright-report
+        path: reports/html/*

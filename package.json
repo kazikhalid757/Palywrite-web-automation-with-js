@@ -1,0 +1,15 @@
+{
+  "name": "playwright-cucumber-pom",
+  "version": "1.0.0",
+  "description": "Playwright project with POM and reporting",
+  "main": "index.js",
+  "scripts": {
+    "test": "playwright test"
+  },
+  "dependencies": {
+    "playwright": "^1.25.0",
+    "@playwright/test": "^1.25.0"
+  },
+  "author": "",
+  "license": "ISC"
+}

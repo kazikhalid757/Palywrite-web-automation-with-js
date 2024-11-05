@@ -32,12 +32,6 @@ jobs:
       env:
         HEADLESS: true # Run in headless mode
 
-    - name: Generate Reports
-      run: |
-        npx playwright show-report reports/html
-        mkdir -p reports
-        mv reports/html reports/html/$(date +'%Y-%m-%d_%H-%M-%S')
-
     - name: Upload Test Report
       uses: actions/upload-artifact@v3
       with:

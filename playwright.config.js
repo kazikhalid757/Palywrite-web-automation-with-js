@@ -13,6 +13,6 @@ module.exports = defineConfig({
         ['json', { outputFile: 'reports/test-results.json' }]
     ],
     use: {
-        headless: false, // Set headless mode to true
+        headless: true, // Set headless mode to true
     },
 });

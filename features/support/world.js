@@ -5,7 +5,7 @@ class CustomWorld {
     async init() {
         try {
             this.browser = await chromium.launch({ 
-                headless: false,
+                headless: true,
                 channel: 'chrome'  // This will use the system Chrome if available
             });
             this.context = await this.browser.newContext();

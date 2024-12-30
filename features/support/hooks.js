@@ -7,7 +7,7 @@ let page;
 
 Before(async function () {
     // Launch the browser before each test
-    browser = await chromium.launch({ headless: false });
+    browser = await chromium.launch({ headless: true });
     const context = await browser.newContext(); // Create a new context
     page = await context.newPage(); // Create a new page in the context
     await page.goto('https://playwright.dev');

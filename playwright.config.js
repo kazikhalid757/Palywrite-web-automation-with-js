@@ -12,7 +12,7 @@ module.exports = defineConfig({
         ['json', { outputFile: 'reports/test-results.json' }]
     ],
     use: {
-        headless: false,
+        headless: true,
         screenshot: 'only-on-failure',
         video: 'retain-on-failure',
         trace: 'retain-on-failure',

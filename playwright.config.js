@@ -1,9 +1,8 @@
-// playwright.config.js
 const { defineConfig } = require('@playwright/test');
 
 module.exports = defineConfig({
-    testDir: './steps', // Pointing to the steps directory
-    testMatch: '*.js', // Match all JavaScript files
+    testDir: './features',
+    testMatch: '**/*.feature',
     timeout: 30000,
     expect: {
         timeout: 5000
@@ -13,6 +12,9 @@ module.exports = defineConfig({
         ['json', { outputFile: 'reports/test-results.json' }]
     ],
     use: {
-        headless: true, // Set headless mode to true
+        headless: false,
+        screenshot: 'only-on-failure',
+        video: 'retain-on-failure',
+        trace: 'retain-on-failure',
     },
 });

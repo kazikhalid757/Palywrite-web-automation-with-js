@@ -1,15 +1,11 @@
 {
-  "name": "playwright-cucumber-pom",
-  "version": "1.0.0",
-  "description": "Playwright project with POM and reporting",
-  "main": "index.js",
   "scripts": {
-    "test": "playwright test"
+    "test": "cucumber-js",
+    "postinstall": "npx playwright install chromium"
   },
   "dependencies": {
-    "playwright": "^1.25.0",
-    "@playwright/test": "^1.25.0"
-  },
-  "author": "",
-  "license": "ISC"
+    "@cucumber/cucumber": "^9.1.2",
+    "@playwright/test": "^1.39.0",
+    "playwright": "^1.39.0"
+  }
 }

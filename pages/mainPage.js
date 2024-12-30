@@ -1,49 +1,62 @@
-// pages/mainPage.js
 class MainPage {
     constructor(page) {
         this.page = page;
+        this.logoSelector = "img[alt='Playwright logo']";
+        this.docsLinkSelector = "a:text('Docs')";
+        this.apiLinkSelector = "a:text('API')";
+        this.nodeJsLinkSelector = "a:text('Node.js')";
+        this.communityLinkSelector = "a:text('Community')";
+        this.searchButtonSelector = ".DocSearch-Button";
+        this.searchInputSelector = "#docsearch-input";
+        this.searchResultSelector = "//div[normalize-space()='Guides']";
     }
 
     async isLogoVisible() {
-        await this.page.waitForSelector("//img[@alt='Playwright logo']");
-        return await this.page.isVisible("//img[@alt='Playwright logo']");
+        const logo = this.page.locator(this.logoSelector);
+        await logo.waitFor({ state: 'visible', timeout: 5000 });
+        return logo.isVisible();
     }
 
     async isDocsLinkVisible() {
-        await this.page.waitForSelector("//a[normalize-space()='Docs']");
-        return await this.page.isVisible("//a[normalize-space()='Docs']");
+        const docsLink = this.page.locator(this.docsLinkSelector);
+        await docsLink.waitFor({ state: 'visible', timeout: 5000 });
+        return docsLink.isVisible();
     }
 
     async isApiLinkVisible() {
-        await this.page.waitForSelector("//a[normalize-space()='API']");
-        return await this.page.isVisible("//a[normalize-space()='API']");
+        const apiLink = this.page.locator(this.apiLinkSelector);
+        await apiLink.waitFor({ state: 'visible', timeout: 5000 });
+        return apiLink.isVisible();
     }
 
     async isNodeJsLinkVisible() {
-        await this.page.waitForSelector("//a[normalize-space()='Node.js']");
-        return await this.page.isVisible("//a[normalize-space()='Node.js']");
+        const nodeLink = this.page.locator(this.nodeJsLinkSelector);
+        await nodeLink.waitFor({ state: 'visible', timeout: 5000 });
+        return nodeLink.isVisible();
     }
 
     async isCommunityLinkVisible() {
-        await this.page.waitForSelector("//a[normalize-space()='Community']");
-        return await this.page.isVisible("//a[normalize-space()='Community']");
+        const communityLink = this.page.locator(this.communityLinkSelector);
+        await communityLink.waitFor({ state: 'visible', timeout: 5000 });
+        return communityLink.isVisible();
     }
 
     async clickSearchButton() {
-        await this.page.click("//span[@class='DocSearch-Button-Container']//*[name()='svg']");
+        const searchButton = this.page.locator(this.searchButtonSelector);
+        await searchButton.waitFor({ state: 'visible', timeout: 5000 });
+        await searchButton.click();
     }
 
     async enterSearchKeyword(keyword) {
-        await this.page.fill("//input[@id='docsearch-input']", keyword);
+        const searchInput = this.page.locator(this.searchInputSelector);
+        await searchInput.waitFor({ state: 'visible', timeout: 5000 });
+        await searchInput.fill(keyword);
     }
 
     async clickSearchResult() {
-        await this.page.click("//li[@id='docsearch-item-0']//div[@class='DocSearch-Hit-Container']");
-    }
-
-    async isPageVisible(title) {
-        await this.page.waitForSelector("//h1[normalize-space()='" + title + "']");
-        return await this.page.isVisible("//h1[normalize-space()='" + title + "']");
+        const searchResult = this.page.locator(this.searchResultSelector);
+        await searchResult.waitFor({ state: 'visible', timeout: 5000 });
+        await searchResult.click();
     }
 }
 

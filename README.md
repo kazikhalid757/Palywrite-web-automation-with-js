@@ -1,86 +1,118 @@
-
 # Playwright Cucumber POM Project
 
-This project is a Playwright-based web automation framework using the Page Object Model (POM) and Cucumber for behavior-driven development (BDD). It provides an organized structure for writing tests and features clear reporting capabilities.
+This project demonstrates web automation testing using Playwright with Cucumber for BDD and Page Object Model (POM) pattern. It includes automated tests for the Playwright official website.
 
 ## Table of Contents
 
 - [Features](#features)
-- [Requirements](#requirements)
+- [Prerequisites](#prerequisites)
 - [Installation](#installation)
 - [Project Structure](#project-structure)
-- [Usage](#usage)
 - [Running Tests](#running-tests)
-- [Report Generation](#report-generation)
-- [Contributing](#contributing)
+- [Reports](#reports)
 
 ## Features
 
-- Uses Playwright for cross-browser web automation.
-- Implements the Page Object Model for better test organization.
-- Supports behavior-driven development with Cucumber.
-- Generates HTML and JSON reports for test results.
+- Playwright for web automation
+- Cucumber for BDD
+- Page Object Model design pattern
+- HTML and JSON reporting
+- Cross-browser testing support
+- Screenshot and video capture on failure
 
-## Requirements
+## Prerequisites
 
-- Node.js (>= 14.x)
-- NPM (Node Package Manager)
+- Node.js (v14 or higher)
+- npm (Node Package Manager)
+- Chrome browser
 
 ## Installation
 
 1. Clone the repository:
-    ```bash
-    git clone https://github.com/kazikhalid757/Palywrite-web-automation-with-js.git
-    cd Palywrite-web-automation-with-js
-    ```
+```bash
+git clone https://github.com/kazikhalid757/Palywrite-web-automation-with-js.git
+cd Palywrite-web-automation-with-js
+```
 
-2. Install the dependencies:
-    ```bash
-    npm install
-    ```
+2. Install dependencies:
+```bash
+npm install
+```
+
+3. Install Playwright browsers:
+```bash
+npx playwright install chromium
+```
 
 ## Project Structure
 
 ```
-/playwright-cucumber-pom
-├── /features           # Contains Cucumber feature files
-│   └── mainPage.feature
-├── /steps              # Contains step definitions
-│   └── mainPageSteps.js
-├── /pages              # Contains page object models
+project_root/
+├── features/
+│   ├── mainPage.feature         # Cucumber feature files
+│   ├── step_definitions/        # Step definition files
+│   │   └── mainPageSteps.js
+│   └── support/                 # Support files
+│       └── world.js
+├── pages/                       # Page Object files
 │   └── mainPage.js
-├── /reports            # Contains test reports
-├── package.json        # Project metadata and dependencies
-└── playwright.config.js # Playwright configuration
+├── cucumber.js                  # Cucumber configuration
+├── package.json                 # Project dependencies
+└── playwright.config.js         # Playwright configuration
 ```
 
-## Usage
+## Running Tests
 
-### Writing Tests
-
-Tests are defined in the `steps` directory using Cucumber syntax and Playwright's test functions. You can create additional feature files in the `features` directory and their corresponding step definitions in the `steps` directory.
-
-### Running Tests
-
-Run the tests with the following command:
-
+Run all tests:
 ```bash
-npm test
+npm run test
 ```
 
-### Headless Mode
-
-By default, tests are run in headed mode. To run in headless mode, set the `HEADLESS` environment variable to `true`:
-
-
-## Report Generation
-
-Test results are generated in HTML and JSON formats. The HTML report can be found in the `reports/html` directory after tests have run. You can view the report by running:
-
+Run with debug mode:
 ```bash
-npx playwright show-report reports/html
+npm run test:debug
+```
+
+## Reports
+
+Test results are generated in two formats:
+- HTML Report: `cucumber-report.html`
+- JSON Report: `reports/cucumber-report.json`
+
+To view the HTML report, open `cucumber-report.html` in your browser after the test run.
+
+## Test Scenarios
+
+The project includes tests for:
+- Navigation menu visibility
+- Logo visibility
+- Search functionality
+- Documentation access
+
+## Maintenance
+
+- Update dependencies regularly
+- Check Playwright and Cucumber documentation for latest features
+- Maintain page objects when website changes
+
+## Troubleshooting
+
+If you encounter issues:
+1. Ensure all dependencies are installed
+2. Check browser installation
+3. Verify your Node.js version
+4. Clear npm cache if needed:
+```bash
+npm cache clean --force
 ```
 
 ## Contributing
 
-Contributions are welcome! Please feel free to submit a pull request or open an issue for any improvements or bug reports.
+Contributions are welcome! Please:
+1. Fork the repository
+2. Create a feature branch
+3. Submit a pull request
+
+## License
+
+This project is licensed under the MIT License.

@@ -1,0 +1,175 @@
+[
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "playwright-website-navigation;check-navigation-links",
+        "keyword": "Scenario",
+        "line": 3,
+        "name": "Check Navigation Links",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "failed",
+              "duration": 1552599,
+              "error_message": "TypeError: this.init is not a function\n    at World.<anonymous> (C:\\Users\\TallyKhata\\Downloads\\Palywrite-web-automation-with-js-main\\features\\step_definitions\\mainPageSteps.js:8:16)"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "Check that Playwright logo is visible",
+            "match": {
+              "location": "features\\step_definitions\\mainPageSteps.js:13"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 5,
+            "name": "Check that Playwright Docs option is visible",
+            "match": {
+              "location": "features\\step_definitions\\mainPageSteps.js:17"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 6,
+            "name": "Check that Playwright API option is visible",
+            "match": {
+              "location": "features\\step_definitions\\mainPageSteps.js:21"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 7,
+            "name": "Check that Playwright Node.js option is visible",
+            "match": {
+              "location": "features\\step_definitions\\mainPageSteps.js:25"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 8,
+            "name": "Check that Playwright Community option is visible",
+            "match": {
+              "location": "features\\step_definitions\\mainPageSteps.js:29"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "failed",
+              "duration": 278999,
+              "error_message": "TypeError: this.cleanup is not a function\n    at World.<anonymous> (C:\\Users\\TallyKhata\\Downloads\\Palywrite-web-automation-with-js-main\\features\\step_definitions\\mainPageSteps.js:47:16)"
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "playwright-website-navigation;successful-search-docs-in-playwright-search-option-section",
+        "keyword": "Scenario",
+        "line": 10,
+        "name": "Successful Search Docs in Playwright Search option section",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "failed",
+              "duration": 133600,
+              "error_message": "TypeError: this.init is not a function\n    at World.<anonymous> (C:\\Users\\TallyKhata\\Downloads\\Palywrite-web-automation-with-js-main\\features\\step_definitions\\mainPageSteps.js:8:16)"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 11,
+            "name": "Check that Playwright Search option is visible",
+            "match": {
+              "location": "features\\step_definitions\\mainPageSteps.js:33"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 12,
+            "name": "Enter a keyword in the search box",
+            "match": {
+              "location": "features\\step_definitions\\mainPageSteps.js:37"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 13,
+            "name": "Click that Search result",
+            "match": {
+              "location": "features\\step_definitions\\mainPageSteps.js:41"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "failed",
+              "duration": 124199,
+              "error_message": "TypeError: this.cleanup is not a function\n    at World.<anonymous> (C:\\Users\\TallyKhata\\Downloads\\Palywrite-web-automation-with-js-main\\features\\step_definitions\\mainPageSteps.js:47:16)"
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "playwright-website-navigation",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Playwright Website Navigation",
+    "tags": [],
+    "uri": "features\\mainPage.feature"
+  }
+]

@@ -1,0 +1,172 @@
+[
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "playwright-main-page;verify-playwright-main-page-elements",
+        "keyword": "Scenario",
+        "line": 3,
+        "name": "Verify Playwright main page elements",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 795497999
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 4,
+            "name": "the Playwright logo should be visible",
+            "match": {
+              "location": "features\\step_definitions\\mainPageSteps.js:4"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 46345499
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 5,
+            "name": "the \"Docs\" link should be visible",
+            "match": {
+              "location": "features\\step_definitions\\mainPageSteps.js:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2744100
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 6,
+            "name": "the \"API\" link should be visible",
+            "match": {
+              "location": "features\\step_definitions\\mainPageSteps.js:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1735699
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 7,
+            "name": "the \"Node.js\" link should be visible",
+            "match": {
+              "location": "features\\step_definitions\\mainPageSteps.js:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1657699
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 8,
+            "name": "the \"Community\" link should be visible",
+            "match": {
+              "location": "features\\step_definitions\\mainPageSteps.js:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1672000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 152143499
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "playwright-main-page;search-within-playwright-documentation",
+        "keyword": "Scenario",
+        "line": 10,
+        "name": "Search within Playwright documentation",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 668648999
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 11,
+            "name": "the search option is clicked",
+            "match": {
+              "location": "features\\step_definitions\\mainPageSteps.js:18"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 95338099
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 12,
+            "name": "\"getting started\" is entered into the search bar",
+            "match": {
+              "location": "features\\step_definitions\\mainPageSteps.js:22"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 349602600
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 13,
+            "name": "the search result page should display",
+            "match": {
+              "location": "features\\step_definitions\\mainPageSteps.js:26"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 30007735599,
+              "error_message": "page.click: Timeout 30000ms exceeded.\nCall log:\n  \u001b[2m- waiting for locator('//div[normalize-space()=\\'Guides\\']')\u001b[22m\n\n    at MainPage.clickSearchResult (C:\\Users\\TallyKhata\\Downloads\\Palywrite-web-automation-with-js-main\\pages\\mainPage.js:36:25)\n    at CustomWorld.<anonymous> (C:\\Users\\TallyKhata\\Downloads\\Palywrite-web-automation-with-js-main\\features\\step_definitions\\mainPageSteps.js:27:25)"
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 34140400
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "playwright-main-page",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Playwright Main Page",
+    "tags": [],
+    "uri": "features\\mainPage.feature"
+  }
+]
